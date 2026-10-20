@@ -10,7 +10,8 @@ const content = {
     top: 'TOP',
     menuOpen: 'Open menu',
     menuClose: 'Close menu',
-    heroAlt: 'Football stadium illuminated at night',
+    heroAlt: 'Football stadium slideshow',
+    contactPhotoAlt: 'Football stadium illuminated at night',
     standsAlt: 'Stadium seating and football field',
     fieldAlt: 'Aerial view of a green football pitch',
     nav: ['About', 'Expertise', 'Approach', 'Contact'],
@@ -21,10 +22,11 @@ const content = {
     explore: 'Explore what we build',
     scroll: 'Scroll to explore',
     heroIndex: 'THE FIELD IS JUST THE BEGINNING',
-    introEyebrow: 'EXTRA FIELDS / WHO WE ARE',
+    introEyebrow: 'X-TRAFIELDS / WHO WE ARE',
     introTitle: ['MORE THAN', 'A FIELD.'],
     introLead: 'We turn ambitious sports ideas into spaces ready for the real game.',
-    introBody: 'Extra Fields is a stadium and sports surfaces construction company. From the first ground plan to the final line on the pitch, we bring structure, precision and passion to every build.',
+    introBody: 'X-TRAFIELDS is a stadium and sports surfaces construction company. From the first ground plan to the final line on the pitch, we bring structure, precision and passion to every build.',
+    fifaLabel: 'FIFA CERTIFIED', fifaDemo: 'DEMO / TO VERIFY', previousSlide: 'Previous stadium image', nextSlide: 'Next stadium image',
     introTag: 'DESIGNED TO PERFORM',
     expertiseEyebrow: 'WHAT WE BUILD',
     expertiseTitle: ['BUILT FOR', 'EVERY LEVEL', 'OF PLAY.'],
@@ -61,7 +63,8 @@ const content = {
     top: 'ARRIBA',
     menuOpen: 'Abrir menú',
     menuClose: 'Cerrar menú',
-    heroAlt: 'Estadio de fútbol iluminado de noche',
+    heroAlt: 'Presentación de estadios de fútbol',
+    contactPhotoAlt: 'Estadio de fútbol iluminado de noche',
     standsAlt: 'Tribunas de estadio y cancha de fútbol',
     fieldAlt: 'Vista aérea de una cancha de fútbol',
     nav: ['Nosotros', 'Especialidades', 'Proceso', 'Contacto'],
@@ -72,10 +75,11 @@ const content = {
     explore: 'Explorá lo que construimos',
     scroll: 'Deslizá para explorar',
     heroIndex: 'LA CANCHA ES SOLO EL COMIENZO',
-    introEyebrow: 'EXTRA FIELDS / QUIÉNES SOMOS',
+    introEyebrow: 'X-TRAFIELDS / QUIÉNES SOMOS',
     introTitle: ['MÁS QUE', 'UNA CANCHA.'],
     introLead: 'Transformamos ideas deportivas ambiciosas en espacios listos para el juego real.',
-    introBody: 'Extra Fields es una constructora de estadios y superficies deportivas. Del primer plano a la última línea de la cancha, aportamos estructura, precisión y pasión a cada obra.',
+    introBody: 'X-TRAFIELDS es una constructora de estadios y superficies deportivas. Del primer plano a la última línea de la cancha, aportamos estructura, precisión y pasión a cada obra.',
+    fifaLabel: 'CERTIFICADO POR FIFA', fifaDemo: 'DEMO / A VERIFICAR', previousSlide: 'Imagen anterior del estadio', nextSlide: 'Siguiente imagen del estadio',
     introTag: 'DISEÑADO PARA RENDIR',
     expertiseEyebrow: 'LO QUE CONSTRUIMOS',
     expertiseTitle: ['HECHO PARA', 'CADA NIVEL', 'DE JUEGO.'],
@@ -112,7 +116,8 @@ const content = {
     top: 'ΠΑΝΩ',
     menuOpen: 'Άνοιγμα μενού',
     menuClose: 'Κλείσιμο μενού',
-    heroAlt: 'Φωτισμένο γήπεδο ποδοσφαίρου τη νύχτα',
+    heroAlt: 'Παρουσίαση εικόνων σταδίων ποδοσφαίρου',
+    contactPhotoAlt: 'Φωτισμένο γήπεδο ποδοσφαίρου τη νύχτα',
     standsAlt: 'Κερκίδες σταδίου και γήπεδο ποδοσφαίρου',
     fieldAlt: 'Εναέρια άποψη πράσινου γηπέδου ποδοσφαίρου',
     nav: ['Σχετικά', 'Εξειδίκευση', 'Διαδικασία', 'Επικοινωνία'],
@@ -123,10 +128,11 @@ const content = {
     explore: 'Δείτε τι κατασκευάζουμε',
     scroll: 'Κύλιση για εξερεύνηση',
     heroIndex: 'ΤΟ ΓΗΠΕΔΟ ΕΙΝΑΙ ΜΟΝΟ Η ΑΡΧΗ',
-    introEyebrow: 'EXTRA FIELDS / ΠΟΙΟΙ ΕΙΜΑΣΤΕ',
+    introEyebrow: 'X-TRAFIELDS / ΠΟΙΟΙ ΕΙΜΑΣΤΕ',
     introTitle: ['ΚΑΤΙ ΠΑΡΑΠΑΝΩ', 'ΑΠΟ ΓΗΠΕΔΟ.'],
     introLead: 'Μετατρέπουμε φιλόδοξες αθλητικές ιδέες σε χώρους έτοιμους για πραγματικό παιχνίδι.',
-    introBody: 'Η Extra Fields κατασκευάζει στάδια και αθλητικές επιφάνειες. Από το πρώτο σχέδιο έως την τελευταία γραμμή του γηπέδου, φέρνουμε δομή, ακρίβεια και πάθος σε κάθε έργο.',
+    introBody: 'Η X-TRAFIELDS κατασκευάζει στάδια και αθλητικές επιφάνειες. Από το πρώτο σχέδιο έως την τελευταία γραμμή του γηπέδου, φέρνουμε δομή, ακρίβεια και πάθος σε κάθε έργο.',
+    fifaLabel: 'ΠΙΣΤΟΠΟΙΗΜΕΝΟ ΑΠΟ FIFA', fifaDemo: 'ΔΕΙΓΜΑ / ΠΡΟΣ ΕΠΑΛΗΘΕΥΣΗ', previousSlide: 'Προηγούμενη εικόνα σταδίου', nextSlide: 'Επόμενη εικόνα σταδίου',
     introTag: 'ΣΧΕΔΙΑΣΜΕΝΟ ΓΙΑ ΑΠΟΔΟΣΗ',
     expertiseEyebrow: 'ΤΙ ΚΑΤΑΣΚΕΥΑΖΟΥΜΕ',
     expertiseTitle: ['ΓΙΑ ΚΑΘΕ', 'ΕΠΙΠΕΔΟ', 'ΠΑΙΧΝΙΔΙΟΥ.'],
@@ -165,6 +171,8 @@ const photos = {
   stands: '/images/stadium-stands.jpg'
 };
 
+const heroSlides = ['/images/stadium-aerial.jpg', '/images/stadium-day.jpg', '/images/night-stadium.jpg'];
+
 function ArrowIcon({ diagonal = false }) {
   return diagonal ? (
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
@@ -174,18 +182,6 @@ function ArrowIcon({ diagonal = false }) {
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
       <path d="M3 12h17m-7-7 7 7-7 7" stroke="currentColor" strokeWidth="1.6" />
     </svg>
-  );
-}
-
-function BrandMark() {
-  return (
-    <span className="brand-mark" aria-hidden="true">
-      <svg viewBox="0 0 40 40" fill="none">
-        <path d="M4 4h32v32H4z" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M4 20h32M20 4v32" stroke="currentColor" strokeWidth="1.2" />
-        <circle cx="20" cy="20" r="6" stroke="currentColor" strokeWidth="1.2" />
-      </svg>
-    </span>
   );
 }
 
@@ -205,12 +201,13 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeService, setActiveService] = useState(0);
+  const [activeSlide, setActiveSlide] = useState(0);
   const lenisRef = useRef(null);
   const t = content[language];
 
   useEffect(() => {
     document.documentElement.lang = language;
-    document.title = `Extra Fields — ${t.heroTitle.join(' ')}`;
+    document.title = `X-TRAFIELDS — ${t.heroTitle.join(' ')}`;
     localStorage.setItem('extra-fields-language', language);
   }, [language, t.heroTitle]);
 
@@ -239,6 +236,12 @@ function App() {
   }, []);
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+    const timer = window.setInterval(() => setActiveSlide((index) => (index + 1) % heroSlides.length), 6000);
+    return () => window.clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -246,17 +249,23 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const revealElements = document.querySelectorAll('[data-reveal]');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
+    const revealElements = [...document.querySelectorAll('[data-reveal]')];
+    let frame = 0;
+    const revealPassed = () => {
+      frame = 0;
+      revealElements.forEach((element) => {
+        if (element.getBoundingClientRect().top < window.innerHeight * 0.92) element.classList.add('is-visible');
       });
-    }, { threshold: 0.13, rootMargin: '0px 0px -30px 0px' });
-    revealElements.forEach((element) => observer.observe(element));
-    return () => observer.disconnect();
+    };
+    const scheduleReveal = () => { if (!frame) frame = window.requestAnimationFrame(revealPassed); };
+    revealPassed();
+    window.addEventListener('scroll', scheduleReveal, { passive: true });
+    window.addEventListener('resize', scheduleReveal);
+    return () => {
+      window.removeEventListener('scroll', scheduleReveal);
+      window.removeEventListener('resize', scheduleReveal);
+      window.cancelAnimationFrame(frame);
+    };
   }, [language]);
 
   const jumpTo = (id) => {
@@ -273,9 +282,8 @@ function App() {
   return (
     <div className="site-shell">
       <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
-        <a className="brand" href="#top" onClick={(event) => { event.preventDefault(); jumpTo('#top'); }} aria-label="Extra Fields home">
-          <BrandMark />
-          <span className="brand-name">EXTRA<span>FIELDS</span><small>{t.brandDescriptor}</small></span>
+        <a className="brand" href="#top" onClick={(event) => { event.preventDefault(); jumpTo('#top'); }} aria-label="X-TRAFIELDS home">
+          <img className="brand-logo" src="/images/x-trafields-logo.png" alt="X-TRAFIELDS" />
         </a>
 
         <nav className={`site-nav ${menuOpen ? 'is-open' : ''}`} aria-label="Main navigation">
@@ -316,7 +324,9 @@ function App() {
 
       <main>
         <section className="hero" id="top" aria-labelledby="hero-title">
-          <div className="hero-image" role="img" aria-label={t.heroAlt} />
+          <div className="hero-slides" role="img" aria-label={t.heroAlt}>
+            {heroSlides.map((src, index) => <div key={src} className={`hero-image ${activeSlide === index ? 'is-active' : ''}`} style={{ backgroundImage: `url(${src})` }} aria-hidden="true" />)}
+          </div>
           <div className="hero-shade" />
           <div className="hero-grid" aria-hidden="true" />
           <div className="hero-content">
@@ -329,36 +339,43 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="hero-side-note">EXTRA FIELDS <span>—</span> {t.heroSide}</div>
+          <div className="hero-side-note">X-TRAFIELDS <span>—</span> {t.heroSide}</div>
           <div className="hero-floor">
-            <span>{t.heroIndex}</span>
+            <div className="fifa-badge" aria-label={`${t.fifaLabel}. ${t.fifaDemo}`}>
+              <span>{t.fifaLabel}<small>{t.fifaDemo}</small></span>
+              <img src="/images/fifa-logo.svg" alt="FIFA" />
+            </div>
             <button type="button" onClick={() => jumpTo('#about')}><span className="scroll-line" />{t.scroll}</button>
-            <span>01 / 04</span>
+            <div className="slide-controls">
+              <button type="button" onClick={() => setActiveSlide((index) => (index + heroSlides.length - 1) % heroSlides.length)} aria-label={t.previousSlide}>←</button>
+              <span aria-live="polite">0{activeSlide + 1} / 0{heroSlides.length}</span>
+              <button type="button" onClick={() => setActiveSlide((index) => (index + 1) % heroSlides.length)} aria-label={t.nextSlide}>→</button>
+            </div>
           </div>
         </section>
 
         <section className="intro section-pad" id="about">
-          <div className="section-kicker" data-reveal><span className="kicker-bar" />{t.introEyebrow}</div>
+          <div className="section-kicker" data-reveal="wipe"><span className="kicker-bar" />{t.introEyebrow}</div>
           <div className="intro-layout">
-            <div className="intro-copy" data-reveal>
+            <div className="intro-copy" data-reveal="from-left">
               <h2><LineTitle lines={t.introTitle} /></h2>
               <p className="intro-lead">{t.introLead}</p>
               <p className="body-copy">{t.introBody}</p>
               <div className="intro-signature"><span className="signature-line" />{t.introTag}</div>
             </div>
-            <div className="intro-collage" data-reveal>
+            <div className="intro-collage" data-reveal="pop">
               <div className="collage-outline" />
               <div className="collage-main image-frame"><img src={photos.stands} alt={t.standsAlt} loading="lazy" /></div>
               <div className="collage-small image-frame"><img src={photos.field} alt={t.fieldAlt} loading="lazy" /></div>
-              <div className="collage-square"><span>EXTRA<br />FIELDS</span><ArrowIcon diagonal /></div>
+              <div className="collage-square"><span>X-TRA<br />FIELDS</span><ArrowIcon diagonal /></div>
               <div className="collage-caption">{t.structure} <span>×</span> {t.performance}</div>
             </div>
           </div>
         </section>
 
         <section className="expertise section-pad" id="expertise">
-          <div className="section-kicker" data-reveal><span className="kicker-bar" />{t.expertiseEyebrow}</div>
-          <div className="expertise-heading" data-reveal>
+          <div className="section-kicker" data-reveal="wipe"><span className="kicker-bar" />{t.expertiseEyebrow}</div>
+          <div className="expertise-heading" data-reveal="from-left">
             <h2><LineTitle lines={t.expertiseTitle} /></h2>
             <p>{t.expertiseCopy}</p>
           </div>
@@ -371,7 +388,7 @@ function App() {
                 onMouseEnter={() => setActiveService(index)}
                 onFocus={() => setActiveService(index)}
                 onClick={() => setActiveService(index)}
-                data-reveal
+                data-reveal="pop"
               >
                 <img src={[photos.stadium, photos.field, photos.turf][index]} alt="" loading="lazy" />
                 <span className="card-shade" />
@@ -390,22 +407,22 @@ function App() {
           <div className="statement-image" />
           <div className="statement-overlay" />
           <div className="statement-cross" aria-hidden="true">+</div>
-          <div className="statement-content" data-reveal>
+          <div className="statement-content" data-reveal="from-left">
             <div className="section-kicker"><span className="kicker-bar" />{t.statementEyebrow}</div>
             <h2 id="statement-title"><LineTitle lines={t.statement} /></h2>
           </div>
-          <div className="statement-corner" aria-hidden="true"><BrandMark /></div>
+          <div className="statement-corner" aria-hidden="true"><img src="/images/x-trafields-logo.png" alt="" /></div>
         </section>
 
         <section className="approach section-pad" id="approach">
-          <div className="section-kicker" data-reveal><span className="kicker-bar" />{t.processEyebrow}</div>
-          <div className="approach-top" data-reveal>
+          <div className="section-kicker" data-reveal="wipe"><span className="kicker-bar" />{t.processEyebrow}</div>
+          <div className="approach-top" data-reveal="from-right">
             <h2><LineTitle lines={t.processTitle} /></h2>
             <p>{t.processCopy}</p>
           </div>
           <div className="process-grid">
             {t.steps.map((step) => (
-              <div className="process-card" key={step.number} data-reveal>
+              <div className="process-card" key={step.number} data-reveal="pop">
                 <span className="process-number">{step.number}</span>
                 <div className="process-content"><h3>{step.title}</h3><p>{step.copy}</p></div>
                 <span className="process-cross" aria-hidden="true">+</span>
@@ -415,7 +432,7 @@ function App() {
         </section>
 
         <section className="contact" id="contact">
-          <div className="contact-panel" data-reveal>
+          <div className="contact-panel" data-reveal="from-left">
             <div className="section-kicker"><span className="kicker-bar" />{t.contactEyebrow}</div>
             <h2><LineTitle lines={t.contactTitle} /></h2>
             <p>{t.contactCopy}</p>
@@ -429,15 +446,15 @@ function App() {
             </a>
             <small>{t.contactNote}</small>
           </div>
-          <div className="contact-photo"><img src={photos.hero} alt={t.heroAlt} loading="lazy" /></div>
+          <div className="contact-photo"><img src={photos.hero} alt={t.contactPhotoAlt} loading="lazy" /></div>
         </section>
       </main>
 
       <footer className="site-footer">
         <div className="footer-main">
-          <a className="brand" href="#top" onClick={(event) => { event.preventDefault(); jumpTo('#top'); }}><BrandMark /><span className="brand-name">EXTRA<span>FIELDS</span><small>{t.brandDescriptor}</small></span></a>
+          <a className="brand" href="#top" onClick={(event) => { event.preventDefault(); jumpTo('#top'); }}><img className="brand-logo" src="/images/x-trafields-logo.png" alt="X-TRAFIELDS" /></a>
           <p>{t.footerLine}</p>
-          <span>© {new Date().getFullYear()} EXTRA FIELDS S.A.</span>
+          <span>© {new Date().getFullYear()} X-TRAFIELDS S.A.</span>
         </div>
         <div className="footer-bottom">
           <span>{t.photoCredits}</span>
