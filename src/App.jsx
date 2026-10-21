@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Lenis from 'lenis';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCompassDrafting, faFutbol, faHelmetSafety } from '@fortawesome/free-solid-svg-icons';
 
 const content = {
   en: {
@@ -172,6 +174,7 @@ const photos = {
 };
 
 const heroSlides = ['/images/stadium-aerial.jpg', '/images/stadium-day.jpg', '/images/night-stadium.jpg'];
+const processIcons = [faCompassDrafting, faHelmetSafety, faFutbol];
 
 function ArrowIcon({ diagonal = false }) {
   return diagonal ? (
@@ -200,7 +203,6 @@ function App() {
   });
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeService, setActiveService] = useState(0);
   const [activeSlide, setActiveSlide] = useState(0);
   const lenisRef = useRef(null);
   const t = content[language];
@@ -379,16 +381,11 @@ function App() {
             <h2><LineTitle lines={t.expertiseTitle} /></h2>
             <p>{t.expertiseCopy}</p>
           </div>
-          <div className="service-grid">
+          <div className="service-grid" data-reveal="cards">
             {t.services.map((service, index) => (
-              <button
-                className={`service-card service-card-${index + 1} ${activeService === index ? 'is-active' : ''}`}
-                type="button"
+              <article
+                className={`service-card service-card-${index + 1}`}
                 key={service.number}
-                onMouseEnter={() => setActiveService(index)}
-                onFocus={() => setActiveService(index)}
-                onClick={() => setActiveService(index)}
-                data-reveal="pop"
               >
                 <img src={[photos.stadium, photos.field, photos.turf][index]} alt="" loading="lazy" />
                 <span className="card-shade" />
@@ -398,7 +395,7 @@ function App() {
                   <span className="service-copy">{service.copy}</span>
                 </span>
                 <span className="service-arrow"><ArrowIcon diagonal /></span>
-              </button>
+              </article>
             ))}
           </div>
         </section>
@@ -420,12 +417,12 @@ function App() {
             <h2><LineTitle lines={t.processTitle} /></h2>
             <p>{t.processCopy}</p>
           </div>
-          <div className="process-grid">
-            {t.steps.map((step) => (
-              <div className="process-card" key={step.number} data-reveal="pop">
-                <span className="process-number">{step.number}</span>
+          <div className="process-grid" data-reveal="cards">
+            {t.steps.map((step, index) => (
+              <div className="process-card" key={step.number}>
+                <span className="process-icon" aria-hidden="true"><FontAwesomeIcon icon={processIcons[index]} /></span>
                 <div className="process-content"><h3>{step.title}</h3><p>{step.copy}</p></div>
-                <span className="process-cross" aria-hidden="true">+</span>
+                <span className="process-trace" aria-hidden="true" />
               </div>
             ))}
           </div>
