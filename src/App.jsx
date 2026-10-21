@@ -2,6 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import Lenis from 'lenis';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCompassDrafting, faFutbol, faHelmetSafety } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
+const contactRecipient = import.meta.env.VITE_CONTACT_TO?.trim() || '';
+const contactSite = import.meta.env.VITE_CONTACT_SITE?.trim() || 'x-trafields.com';
+const whatsappNumber = (import.meta.env.VITE_WHATSAPP_NUMBER || '').replace(/\D/g, '');
 
 const content = {
   en: {
@@ -51,8 +56,14 @@ const content = {
     contactEyebrow: 'LET’S BUILD WHAT’S NEXT',
     contactTitle: ['YOUR NEXT', 'FIELD STARTS', 'HERE.'],
     contactCopy: 'Have a stadium, pitch or sports surface in mind? Let’s turn the idea into a place worth playing on.',
-    contactButton: 'Search us on Facebook',
-    contactNote: 'Opens a Facebook search for X-trafields S.A.',
+    formEyebrow: 'TELL US ABOUT YOUR PROJECT', formTitle: 'Let’s get to work.',
+    formName: 'Your name', formEmail: 'Email address', formProject: 'What are you building?', formMessage: 'Tell us about it',
+    formProjectOptions: ['Select a project type', 'Stadium', 'Football field', 'Sports surface', 'Other'],
+    formNamePlaceholder: 'Name and surname', formEmailPlaceholder: 'you@company.com', formMessagePlaceholder: 'Tell us where, what and when you have in mind...',
+    formSubmit: 'Send project inquiry', formSending: 'Sending...', formSuccess: 'Thanks! Your message has been sent.',
+    formError: 'Your message could not be sent. Please try again.', formInvalid: 'Please complete your name, a valid email and your message.',
+    formPending: 'Demo form — sending will be enabled when a contact email is added.',
+    whatsappLabel: 'Chat on WhatsApp', whatsappPending: 'WhatsApp number pending',
     footerLine: 'STADIUMS. FIELDS. SURFACES.',
     photoCredits: 'Illustrative photography: Pexels contributors',
     madeBy: 'Made by'
@@ -104,8 +115,14 @@ const content = {
     contactEyebrow: 'CONSTRUYAMOS LO QUE VIENE',
     contactTitle: ['TU PRÓXIMA', 'CANCHA EMPIEZA', 'ACÁ.'],
     contactCopy: '¿Tenés en mente un estadio, una cancha o una superficie deportiva? Hagamos que esa idea cobre vida.',
-    contactButton: 'Buscanos en Facebook',
-    contactNote: 'Abre una búsqueda de X-trafields S.A. en Facebook.',
+    formEyebrow: 'CONTANOS TU PROYECTO', formTitle: 'Manos a la obra.',
+    formName: 'Tu nombre', formEmail: 'Correo electrónico', formProject: '¿Qué querés construir?', formMessage: 'Contanos un poco más',
+    formProjectOptions: ['Seleccioná un tipo de proyecto', 'Estadio', 'Cancha de fútbol', 'Superficie deportiva', 'Otro'],
+    formNamePlaceholder: 'Nombre y apellido', formEmailPlaceholder: 'vos@empresa.com', formMessagePlaceholder: 'Contanos dónde, qué y cuándo tenés en mente...',
+    formSubmit: 'Enviar consulta', formSending: 'Enviando...', formSuccess: '¡Gracias! Tu mensaje fue enviado.',
+    formError: 'No se pudo enviar tu mensaje. Intentá de nuevo.', formInvalid: 'Completá tu nombre, un correo válido y el mensaje.',
+    formPending: 'Formulario de muestra: el envío se habilitará cuando agreguemos el correo de contacto.',
+    whatsappLabel: 'Chatear por WhatsApp', whatsappPending: 'Falta confirmar el número de WhatsApp',
     footerLine: 'ESTADIOS. CANCHAS. SUPERFICIES.',
     photoCredits: 'Fotografías ilustrativas: colaboradores de Pexels',
     madeBy: 'Hecho por'
@@ -157,8 +174,14 @@ const content = {
     contactEyebrow: 'ΑΣ ΧΤΙΣΟΥΜΕ ΤΟ ΕΠΟΜΕΝΟ',
     contactTitle: ['ΤΟ ΕΠΟΜΕΝΟ', 'ΓΗΠΕΔΟ ΞΕΚΙΝΑ', 'ΕΔΩ.'],
     contactCopy: 'Σχεδιάζετε στάδιο, γήπεδο ή αθλητική επιφάνεια; Ας δώσουμε μορφή στην ιδέα σας.',
-    contactButton: 'Αναζητήστε μας στο Facebook',
-    contactNote: 'Ανοίγει αναζήτηση στο Facebook για την X-trafields S.A.',
+    formEyebrow: 'ΠΕΙΤΕ ΜΑΣ ΓΙΑ ΤΟ ΕΡΓΟ ΣΑΣ', formTitle: 'Ας ξεκινήσουμε.',
+    formName: 'Το όνομά σας', formEmail: 'Email', formProject: 'Τι θέλετε να κατασκευάσετε;', formMessage: 'Πείτε μας περισσότερα',
+    formProjectOptions: ['Επιλέξτε τύπο έργου', 'Στάδιο', 'Γήπεδο ποδοσφαίρου', 'Αθλητική επιφάνεια', 'Άλλο'],
+    formNamePlaceholder: 'Ονοματεπώνυμο', formEmailPlaceholder: 'you@company.com', formMessagePlaceholder: 'Πείτε μας πού, τι και πότε σχεδιάζετε...',
+    formSubmit: 'Αποστολή αιτήματος', formSending: 'Αποστολή...', formSuccess: 'Ευχαριστούμε! Το μήνυμά σας στάλθηκε.',
+    formError: 'Δεν ήταν δυνατή η αποστολή. Δοκιμάστε ξανά.', formInvalid: 'Συμπληρώστε όνομα, έγκυρο email και μήνυμα.',
+    formPending: 'Δοκιμαστική φόρμα — η αποστολή θα ενεργοποιηθεί όταν προστεθεί email επικοινωνίας.',
+    whatsappLabel: 'Συνομιλία στο WhatsApp', whatsappPending: 'Εκκρεμεί ο αριθμός WhatsApp',
     footerLine: 'ΣΤΑΔΙΑ. ΓΗΠΕΔΑ. ΕΠΙΦΑΝΕΙΕΣ.',
     photoCredits: 'Ενδεικτικές φωτογραφίες: δημιουργοί του Pexels',
     madeBy: 'Δημιουργία'
@@ -193,6 +216,70 @@ function LineTitle({ lines, className = '' }) {
     <span className={className}>
       {lines.map((line) => <span className="title-line" key={line}>{line}</span>)}
     </span>
+  );
+}
+
+function ContactForm({ t }) {
+  const [fields, setFields] = useState({ name: '', email: '', project: '', message: '', company: '' });
+  const [status, setStatus] = useState('idle');
+
+  const updateField = (event) => {
+    setFields((current) => ({ ...current, [event.target.name]: event.target.value }));
+    if (status !== 'sending') setStatus('idle');
+  };
+
+  const submit = async (event) => {
+    event.preventDefault();
+    const name = fields.name.trim();
+    const email = fields.email.trim();
+    const message = fields.message.trim();
+    if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !message) {
+      setStatus('invalid');
+      return;
+    }
+    if (!contactRecipient) return;
+    setStatus('sending');
+    try {
+      const response = await fetch('https://contact-form-service-e8aa.onrender.com/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          to: contactRecipient,
+          site: contactSite,
+          message: fields.project ? `${t.formProjectOptions[Number(fields.project)]}: ${message}` : message,
+          company: fields.company
+        })
+      });
+      const result = await response.json();
+      if (!response.ok || result?.success !== true) throw new Error('Contact request failed');
+      setFields({ name: '', email: '', project: '', message: '', company: '' });
+      setStatus('success');
+    } catch {
+      setStatus('error');
+    }
+  };
+
+  return (
+    <form className="contact-form" onSubmit={submit} noValidate>
+      <div className="form-heading"><span>{t.formEyebrow}</span><h3>{t.formTitle}</h3></div>
+      <div className="form-row">
+        <label>{t.formName}<input name="name" type="text" autoComplete="name" value={fields.name} onChange={updateField} placeholder={t.formNamePlaceholder} required /></label>
+        <label>{t.formEmail}<input name="email" type="email" autoComplete="email" value={fields.email} onChange={updateField} placeholder={t.formEmailPlaceholder} required /></label>
+      </div>
+      <label>{t.formProject}
+        <select name="project" value={fields.project} onChange={updateField}>
+          {t.formProjectOptions.map((option, index) => <option key={index} value={index || ''}>{option}</option>)}
+        </select>
+      </label>
+      <label>{t.formMessage}<textarea name="message" rows="4" value={fields.message} onChange={updateField} placeholder={t.formMessagePlaceholder} required /></label>
+      <input className="form-honeypot" name="company" type="text" tabIndex="-1" autoComplete="off" value={fields.company} onChange={updateField} aria-hidden="true" />
+      <div className="form-bottom">
+        <button type="submit" disabled={!contactRecipient || status === 'sending'}>{status === 'sending' ? t.formSending : t.formSubmit}<ArrowIcon diagonal /></button>
+        <span className="form-status" role="status" aria-live="polite">{!contactRecipient ? t.formPending : status === 'success' ? t.formSuccess : status === 'error' ? t.formError : status === 'invalid' ? t.formInvalid : ''}</span>
+      </div>
+    </form>
   );
 }
 
@@ -433,17 +520,11 @@ function App() {
             <div className="section-kicker"><span className="kicker-bar" />{t.contactEyebrow}</div>
             <h2><LineTitle lines={t.contactTitle} /></h2>
             <p>{t.contactCopy}</p>
-            <a
-              href="https://www.facebook.com/search/top?q=X-trafields%20S.A"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-link"
-            >
-              {t.contactButton}<ArrowIcon diagonal />
-            </a>
-            <small>{t.contactNote}</small>
           </div>
-          <div className="contact-photo"><img src={photos.hero} alt={t.contactPhotoAlt} loading="lazy" /></div>
+          <div className="contact-form-stage" data-reveal="from-right">
+            <img src={photos.hero} alt="" loading="lazy" />
+            <ContactForm t={t} />
+          </div>
         </section>
       </main>
 
@@ -459,6 +540,11 @@ function App() {
           <a href="#top" onClick={(event) => { event.preventDefault(); jumpTo('#top'); }}>↑ {t.top}</a>
         </div>
       </footer>
+      {whatsappNumber ? (
+        <a className="whatsapp-float" href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" aria-label={t.whatsappLabel} title={t.whatsappLabel}><FontAwesomeIcon icon={faWhatsapp} /></a>
+      ) : (
+        <button className="whatsapp-float is-pending" type="button" disabled aria-label={t.whatsappPending} title={t.whatsappPending}><FontAwesomeIcon icon={faWhatsapp} /></button>
+      )}
     </div>
   );
 }
