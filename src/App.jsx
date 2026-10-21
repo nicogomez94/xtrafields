@@ -3,7 +3,9 @@ import Lenis from 'lenis';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCompassDrafting, faFutbol, faHelmetSafety } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { contactDebugDefaults } from './debugDefaults';
 
+const DEBUG = import.meta.env.VITE_DEBUG === 'true';
 const contactRecipient = import.meta.env.VITE_CONTACT_TO?.trim() || '';
 const contactSite = import.meta.env.VITE_CONTACT_SITE?.trim() || 'x-trafields.com';
 const whatsappNumber = (import.meta.env.VITE_WHATSAPP_NUMBER || '').replace(/\D/g, '');
@@ -220,7 +222,8 @@ function LineTitle({ lines, className = '' }) {
 }
 
 function ContactForm({ t }) {
-  const [fields, setFields] = useState({ name: '', email: '', project: '', message: '', company: '' });
+  const emptyFields = { name: '', email: '', project: '', message: '', company: '' };
+  const [fields, setFields] = useState(DEBUG ? contactDebugDefaults : emptyFields);
   const [status, setStatus] = useState('idle');
 
   const updateField = (event) => {
@@ -254,7 +257,7 @@ function ContactForm({ t }) {
       });
       const result = await response.json();
       if (!response.ok || result?.success !== true) throw new Error('Contact request failed');
-      setFields({ name: '', email: '', project: '', message: '', company: '' });
+      setFields(emptyFields);
       setStatus('success');
     } catch {
       setStatus('error');
@@ -326,7 +329,7 @@ function App() {
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
-    const timer = window.setInterval(() => setActiveSlide((index) => (index + 1) % heroSlides.length), 6000);
+    const timer = window.setInterval(() => setActiveSlide((index) => (index + 1) % heroSlides.length), 6800);
     return () => window.clearInterval(timer);
   }, []);
 
@@ -536,9 +539,9 @@ function App() {
         </div>
         <div className="footer-bottom">
           <span>{t.photoCredits}</span>
-          <span className="footer-credit">{t.madeBy} <a href="https://zigodev.com.ar" target="_blank" rel="noopener noreferrer">zigodev</a></span>
           <a href="#top" onClick={(event) => { event.preventDefault(); jumpTo('#top'); }}>↑ {t.top}</a>
         </div>
+        <div className="footer-credit">{t.madeBy} <a href="https://zigodev.com.ar" target="_blank" rel="noopener noreferrer">zigodev</a></div>
       </footer>
       {whatsappNumber ? (
         <a className="whatsapp-float" href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" aria-label={t.whatsappLabel} title={t.whatsappLabel}><FontAwesomeIcon icon={faWhatsapp} /></a>
