@@ -23,7 +23,7 @@ const content = {
     contactPhotoAlt: 'Football stadium illuminated at night',
     standsAlt: 'Stadium seating and football field',
     fieldAlt: 'Aerial view of a green football pitch',
-    nav: ['About', 'Expertise', 'Approach', 'Contact'],
+    nav: ['About', 'Expertise', 'Projects', 'Approach', 'Contact'],
     project: 'Start a project',
     heroEyebrow: 'SPORTS INFRASTRUCTURE / BUILT WITH PURPOSE',
     heroTitle: ['WE BUILD', 'THE STAGE', 'FOR GREATNESS.'],
@@ -44,6 +44,30 @@ const content = {
       { number: '01', title: 'STADIUMS', copy: 'Purpose-built venues where structure, scale and atmosphere come together.' },
       { number: '02', title: 'FOOTBALL FIELDS', copy: 'Pitches made for the pace of the game, from community grounds to professional arenas.' },
       { number: '03', title: 'SPORTS SURFACES', copy: 'High-performance turf and playing surfaces built for consistency and durability.' }
+    ],
+    projectsEyebrow: 'SELECTED PROJECTS',
+    projectsTitle: ['FIELDS THAT', 'MOVE COMMUNITIES', 'FORWARD.'],
+    projectsCopy: 'Two sports spaces created for daily use, competition and community life.',
+    projectsSource: 'Public project reference',
+    projects: [
+      {
+        title: 'MALTERÍA HUDSON',
+        location: 'HUDSON · BERAZATEGUI, BUENOS AIRES',
+        category: 'MUNICIPAL CLUB · 11-A-SIDE FOOTBALL',
+        copy: 'Synthetic turf renewal for a professional-size 100 × 70 m field used by local athletes, clubs and the wider community.',
+        facts: ['100 × 70 M', 'SYNTHETIC TURF', 'FIFA-CERTIFIED DIMENSIONS'],
+        alt: 'Synthetic turf field at Club Municipal Maltería Hudson',
+        credit: 'Image: Municipality of Berazategui'
+      },
+      {
+        title: 'ENRIQUE PINO',
+        location: 'RÍO GALLEGOS · SANTA CRUZ',
+        category: 'COMMUNITY FOOTBALL · AIFB',
+        copy: 'A key field for the Liga Independiente de Fútbol de los Barrios and a regular venue for local and interleague competition.',
+        facts: ['RÍO GALLEGOS', 'SYNTHETIC FIELD', 'COMMUNITY FOOTBALL'],
+        alt: 'Aerial view of the Enrique Pino football field in Río Gallegos',
+        credit: 'Image: La Opinión Austral'
+      }
     ],
     statementEyebrow: 'OUR POINT OF VIEW',
     statement: ['EVERY GREAT GAME', 'NEEDS A GREAT', 'FOUNDATION.'],
@@ -82,7 +106,7 @@ const content = {
     contactPhotoAlt: 'Estadio de fútbol iluminado de noche',
     standsAlt: 'Tribunas de estadio y cancha de fútbol',
     fieldAlt: 'Vista aérea de una cancha de fútbol',
-    nav: ['Nosotros', 'Especialidades', 'Proceso', 'Contacto'],
+    nav: ['Nosotros', 'Especialidades', 'Proyectos', 'Proceso', 'Contacto'],
     project: 'Iniciar un proyecto',
     heroEyebrow: 'INFRAESTRUCTURA DEPORTIVA / CON PROPÓSITO',
     heroTitle: ['CONSTRUIMOS', 'EL ESCENARIO', 'DE LA GRANDEZA.'],
@@ -103,6 +127,30 @@ const content = {
       { number: '01', title: 'ESTADIOS', copy: 'Escenarios concebidos para unir estructura, escala y atmósfera.' },
       { number: '02', title: 'CANCHAS DE FÚTBOL', copy: 'Campos a la altura del juego, desde clubes de barrio hasta estadios profesionales.' },
       { number: '03', title: 'SUPERFICIES DEPORTIVAS', copy: 'Césped y superficies de alto rendimiento, consistentes y duraderas.' }
+    ],
+    projectsEyebrow: 'PROYECTOS DESTACADOS',
+    projectsTitle: ['CANCHAS QUE', 'MUEVEN A LA', 'COMUNIDAD.'],
+    projectsCopy: 'Dos espacios deportivos pensados para el uso cotidiano, la competencia y la vida en comunidad.',
+    projectsSource: 'Referencia pública del proyecto',
+    projects: [
+      {
+        title: 'MALTERÍA HUDSON',
+        location: 'HUDSON · BERAZATEGUI, BUENOS AIRES',
+        category: 'CLUB MUNICIPAL · FÚTBOL 11',
+        copy: 'Renovación con césped sintético de una cancha profesional de 100 × 70 m utilizada por deportistas, clubes y toda la comunidad.',
+        facts: ['100 × 70 M', 'CÉSPED SINTÉTICO', 'MEDIDAS CERTIFICADAS FIFA'],
+        alt: 'Cancha de césped sintético del Club Municipal Maltería Hudson',
+        credit: 'Imagen: Municipalidad de Berazategui'
+      },
+      {
+        title: 'ENRIQUE PINO',
+        location: 'RÍO GALLEGOS · SANTA CRUZ',
+        category: 'FÚTBOL BARRIAL · AIFB',
+        copy: 'Un campo clave para la Liga Independiente de Fútbol de los Barrios y sede habitual de competencias locales e interligas.',
+        facts: ['RÍO GALLEGOS', 'CAMPO SINTÉTICO', 'FÚTBOL COMUNITARIO'],
+        alt: 'Vista aérea de la cancha de fútbol Enrique Pino en Río Gallegos',
+        credit: 'Imagen: La Opinión Austral'
+      }
     ],
     statementEyebrow: 'NUESTRA VISIÓN',
     statement: ['TODO GRAN PARTIDO', 'NECESITA UNA GRAN', 'BASE.'],
@@ -141,7 +189,7 @@ const content = {
     contactPhotoAlt: 'Φωτισμένο γήπεδο ποδοσφαίρου τη νύχτα',
     standsAlt: 'Κερκίδες σταδίου και γήπεδο ποδοσφαίρου',
     fieldAlt: 'Εναέρια άποψη πράσινου γηπέδου ποδοσφαίρου',
-    nav: ['Σχετικά', 'Εξειδίκευση', 'Διαδικασία', 'Επικοινωνία'],
+    nav: ['Σχετικά', 'Εξειδίκευση', 'Έργα', 'Διαδικασία', 'Επικοινωνία'],
     project: 'Ξεκινήστε ένα έργο',
     heroEyebrow: 'ΑΘΛΗΤΙΚΕΣ ΥΠΟΔΟΜΕΣ / ΜΕ ΣΚΟΠΟ',
     heroTitle: ['ΧΤΙΖΟΥΜΕ', 'ΤΗ ΣΚΗΝΗ', 'ΤΟΥ ΜΕΓΑΛΕΙΟΥ.'],
@@ -162,6 +210,30 @@ const content = {
       { number: '01', title: 'ΣΤΑΔΙΑ', copy: 'Χώροι όπου η δομή, η κλίμακα και η ατμόσφαιρα γίνονται ένα.' },
       { number: '02', title: 'ΓΗΠΕΔΑ ΠΟΔΟΣΦΑΙΡΟΥ', copy: 'Γήπεδα για κάθε ρυθμό παιχνιδιού, από την κοινότητα έως τον επαγγελματικό αθλητισμό.' },
       { number: '03', title: 'ΑΘΛΗΤΙΚΕΣ ΕΠΙΦΑΝΕΙΕΣ', copy: 'Χλοοτάπητες και επιφάνειες υψηλής απόδοσης με συνέπεια και αντοχή.' }
+    ],
+    projectsEyebrow: 'ΕΠΙΛΕΓΜΕΝΑ ΕΡΓΑ',
+    projectsTitle: ['ΓΗΠΕΔΑ ΠΟΥ', 'ΕΝΩΝΟΥΝ ΤΗΝ', 'ΚΟΙΝΟΤΗΤΑ.'],
+    projectsCopy: 'Δύο αθλητικοί χώροι για καθημερινή χρήση, αγώνες και ζωή στην κοινότητα.',
+    projectsSource: 'Δημόσια αναφορά έργου',
+    projects: [
+      {
+        title: 'MALTERÍA HUDSON',
+        location: 'HUDSON · BERAZATEGUI, BUENOS AIRES',
+        category: 'ΔΗΜΟΤΙΚΟΣ ΣΥΛΛΟΓΟΣ · ΠΟΔΟΣΦΑΙΡΟ 11×11',
+        copy: 'Ανανέωση συνθετικού χλοοτάπητα σε επαγγελματικό γήπεδο 100 × 70 μ. για αθλητές, συλλόγους και την κοινότητα.',
+        facts: ['100 × 70 Μ', 'ΣΥΝΘΕΤΙΚΟΣ ΧΛΟΟΤΑΠΗΤΑΣ', 'ΔΙΑΣΤΑΣΕΙΣ FIFA'],
+        alt: 'Γήπεδο συνθετικού χλοοτάπητα στο Club Municipal Maltería Hudson',
+        credit: 'Εικόνα: Δήμος Berazategui'
+      },
+      {
+        title: 'ENRIQUE PINO',
+        location: 'RÍO GALLEGOS · SANTA CRUZ',
+        category: 'ΚΟΙΝΟΤΙΚΟ ΠΟΔΟΣΦΑΙΡΟ · AIFB',
+        copy: 'Βασικό γήπεδο της ανεξάρτητης λίγκας συνοικιών και σταθερός χώρος τοπικών και διαλιγκικών διοργανώσεων.',
+        facts: ['RÍO GALLEGOS', 'ΣΥΝΘΕΤΙΚΟ ΓΗΠΕΔΟ', 'ΚΟΙΝΟΤΙΚΟ ΠΟΔΟΣΦΑΙΡΟ'],
+        alt: 'Εναέρια άποψη του γηπέδου Enrique Pino στο Río Gallegos',
+        credit: 'Εικόνα: La Opinión Austral'
+      }
     ],
     statementEyebrow: 'Η ΦΙΛΟΣΟΦΙΑ ΜΑΣ',
     statement: ['ΚΑΘΕ ΜΕΓΑΛΟΣ', 'ΑΓΩΝΑΣ ΘΕΛΕΙ', 'ΓΕΡΑ ΘΕΜΕΛΙΑ.'],
@@ -200,6 +272,16 @@ const photos = {
 
 const heroSlides = ['/images/stadium-aerial.jpg', '/images/stadium-day.jpg', '/images/night-stadium.jpg'];
 const processIcons = [faCompassDrafting, faHelmetSafety, faFutbol];
+const projectAssets = [
+  {
+    image: '/images/projects/malteria-hudson.webp',
+    source: 'https://berazategui.gob.ar/noticias/la-cancha-del-club-malteria-ya-luce-nuevo-cesped-sintetico/'
+  },
+  {
+    image: '/images/projects/enrique-pino.jpg',
+    source: 'https://noticias.santacruz.gob.ar/organismos/desarrollo-social/deporte-y-recreacion/selectivo-de-la-araucania-finalizo-el-interligas-de-futbol-en-rio-gallegos'
+  }
+];
 
 function ArrowIcon({ diagonal = false }) {
   return diagonal ? (
@@ -379,7 +461,7 @@ function App() {
         </a>
 
         <nav className={`site-nav ${menuOpen ? 'is-open' : ''}`} aria-label="Main navigation">
-          {['#about', '#expertise', '#approach', '#contact'].map((id, index) => (
+          {['#about', '#expertise', '#projects', '#approach', '#contact'].map((id, index) => (
             <a href={id} key={id} onClick={(event) => { event.preventDefault(); jumpTo(id); }}>{t.nav[index]}</a>
           ))}
         </nav>
@@ -485,6 +567,37 @@ function App() {
                   <span className="service-copy">{service.copy}</span>
                 </span>
                 <span className="service-arrow"><ArrowIcon diagonal /></span>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="projects section-pad" id="projects">
+          <div className="section-kicker" data-reveal="wipe"><span className="kicker-bar" />{t.projectsEyebrow}</div>
+          <div className="projects-heading" data-reveal="from-left">
+            <h2><LineTitle lines={t.projectsTitle} /></h2>
+            <p>{t.projectsCopy}</p>
+          </div>
+          <div className="project-grid" data-reveal="cards">
+            {t.projects.map((project, index) => (
+              <article className={`project-card project-card-${index + 1}`} key={project.title}>
+                <div className="project-visual">
+                  <img src={projectAssets[index].image} alt={project.alt} loading="lazy" />
+                  <span className="project-image-shade" />
+                  <span className="project-location">{project.location}</span>
+                  <span className="project-credit">{project.credit}</span>
+                </div>
+                <div className="project-body">
+                  <span className="project-category">{project.category}</span>
+                  <h3>{project.title}</h3>
+                  <p>{project.copy}</p>
+                  <div className="project-facts">
+                    {project.facts.map((fact) => <span key={fact}>{fact}</span>)}
+                  </div>
+                  <a href={projectAssets[index].source} target="_blank" rel="noopener noreferrer">
+                    {t.projectsSource}<ArrowIcon diagonal />
+                  </a>
+                </div>
               </article>
             ))}
           </div>
