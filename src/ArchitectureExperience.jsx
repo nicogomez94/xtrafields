@@ -2,7 +2,19 @@ import React, { useEffect, useRef, useState } from 'react';
 import Lenis from 'lenis';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faCompassDrafting, faHelmetSafety, faPaintRoller, faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
 import ContactForm, { whatsappNumber } from './ContactForm';
+
+const serviceIcons = [faCompassDrafting, faHelmetSafety, faPaintRoller, faScrewdriverWrench];
+
+function ArchitectureLogo() {
+  return (
+    <span className="architecture-logo-lockup">
+      <img src="/images/x-trafields_marron_transparente.png" alt="X-TRAFIELDS" />
+      <span className="architecture-logo-tagline">TAILOR MADE</span>
+    </span>
+  );
+}
 
 const gatewayContent = {
   es: {
@@ -354,7 +366,7 @@ export function ArchitectureSite({ language, setLanguage, onHome, onSports }) {
     <div className="architecture-site">
       <header className={`architecture-header ${scrolled ? 'is-scrolled' : ''}`}>
         <button className="architecture-brand" type="button" onClick={onHome} aria-label="X-TRAFIELDS home">
-          <img src="/images/x-trafields-logo.png" alt="X-TRAFIELDS" />
+          <ArchitectureLogo />
         </button>
         <nav className={`architecture-nav ${menuOpen ? 'is-open' : ''}`} aria-label="Architecture navigation">
           {['#architecture-about', '#architecture-services', '#architecture-projects', '#architecture-contact'].map((id, index) => (
@@ -411,9 +423,11 @@ export function ArchitectureSite({ language, setLanguage, onHome, onSports }) {
             <p>{t.servicesCopy}</p>
           </div>
           <div className="architecture-service-grid" data-arch-reveal="cards">
-            {t.services.map((service) => (
+            {t.services.map((service, index) => (
               <article key={service.title}>
-                <span className="architecture-service-mark" aria-hidden="true" />
+                <span className="architecture-service-mark" aria-hidden="true">
+                  <FontAwesomeIcon icon={serviceIcons[index]} />
+                </span>
                 <h3>{service.title}</h3>
                 <p>{service.copy}</p>
                 <Arrow />
@@ -486,7 +500,7 @@ export function ArchitectureSite({ language, setLanguage, onHome, onSports }) {
 
       <footer className="architecture-footer">
         <div className="architecture-footer-main">
-          <button type="button" onClick={onHome}><img src="/images/x-trafields-logo.png" alt="X-TRAFIELDS" /></button>
+          <button type="button" onClick={onHome} aria-label="X-TRAFIELDS home"><ArchitectureLogo /></button>
           <p>{t.footerLine}</p>
           <button type="button" onClick={onSports}>{gatewayContent[language].sports}<Arrow /></button>
         </div>
