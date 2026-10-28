@@ -113,6 +113,22 @@ svg { display: block; width: 100%; height: 100%; }
 
 .header-actions { display: flex; align-items: center; gap: 22px; }
 
+.sports-division-switch {
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 5px 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.25s, border-color 0.25s;
+}
+
+.sports-division-switch:hover { color: var(--lime); border-color: var(--lime); }
+
 .language-picker { display: flex; align-items: center; gap: 2px; }
 
 .language-picker button {
@@ -755,6 +771,7 @@ svg { display: block; width: 100%; height: 100%; }
   .brand-logo { width: 148px; height: 60px; }
   .header-cta { display: none; }
   .header-actions { gap: 10px; }
+  .sports-division-switch { display: none; }
   .language-picker button { font-size: 10px; padding: 5px; }
   .hero { min-height: 630px; max-height: none; }
   .hero-image { background-position: 52% center; }
