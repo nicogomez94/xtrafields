@@ -49,29 +49,59 @@
 .gateway-brand {
   position: absolute;
   z-index: 8;
-  top: 44px;
+  top: 48px;
   left: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  justify-content: center;
+  width: 390px;
+  min-height: 155px;
+  padding: 12px 28px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  background: rgba(12, 27, 17, 0.78);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(22px) saturate(1.2);
   transform: translateX(-50%);
   pointer-events: none;
+  animation: gatewayBrandIn 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.gateway-brand::before,
+.gateway-brand::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-color: #93d58d;
+  border-style: solid;
+}
+
+.gateway-brand::before {
+  top: -1px;
+  left: -1px;
+  border-width: 2px 0 0 2px;
+}
+
+.gateway-brand::after {
+  right: -1px;
+  bottom: -1px;
+  border-width: 0 2px 2px 0;
 }
 
 .gateway-brand img {
-  width: 240px;
-  height: 86px;
+  width: 310px;
+  height: 93px;
   object-fit: contain;
   filter: drop-shadow(0 10px 26px rgba(0, 0, 0, 0.3));
 }
 
 .gateway-brand span {
-  margin-top: -13px;
-  color: rgba(255, 255, 255, 0.58);
-  font-size: 8px;
+  margin-top: -5px;
+  color: #f2f5e9;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
 }
 
@@ -251,7 +281,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: brightness(0) saturate(100%);
+  filter: none;
 }
 
 .architecture-nav { display: flex; align-items: center; gap: 31px; margin-left: 6vw; }
@@ -703,6 +733,397 @@
 .architecture-footer-credit a { color: #c7c9c2; text-decoration: underline; text-underline-offset: 3px; }
 .architecture-whatsapp { background: #244d31; }
 
+/* Architectural drawings, material layers and sectional motion */
+.gateway-panel-content {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gateway-panel:hover .gateway-panel-content {
+  transform: translateY(-12px);
+}
+
+.gateway-panel-shade::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 38%, rgba(156, 211, 142, 0.17) 50%, transparent 62%);
+  transform: translateX(-120%);
+  transition: transform 1.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gateway-panel:hover .gateway-panel-shade::after {
+  transform: translateX(120%);
+}
+
+.architecture-header {
+  background: rgba(240, 238, 231, 0.86);
+  backdrop-filter: blur(18px);
+}
+
+.architecture-hero-copy {
+  background-image:
+    linear-gradient(rgba(37, 75, 50, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 75, 50, 0.055) 1px, transparent 1px),
+    radial-gradient(circle at 88% 18%, rgba(147, 180, 127, 0.17), transparent 42%);
+  background-size: 38px 38px, 38px 38px, auto;
+}
+
+.architecture-hero-copy::before {
+  content: '';
+  position: absolute;
+  top: 19%;
+  right: -85px;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(37, 75, 50, 0.2);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.architecture-hero-copy::after {
+  content: '';
+  position: absolute;
+  top: 14%;
+  right: 5%;
+  width: 82px;
+  height: 82px;
+  border-top: 1px solid rgba(37, 75, 50, 0.35);
+  border-right: 1px solid rgba(37, 75, 50, 0.35);
+  pointer-events: none;
+}
+
+.architecture-hero-visual {
+  animation: architecturePanelIn 1.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.architecture-hero h1 span {
+  animation: architectureTitleIn 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.architecture-hero h1 span:nth-child(1) { animation-delay: 0.18s; }
+.architecture-hero h1 span:nth-child(2) { animation-delay: 0.3s; }
+.architecture-hero h1 span:nth-child(3) { animation-delay: 0.42s; }
+
+.architecture-eyebrow,
+.architecture-hero-bottom {
+  animation: architectureTextIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.architecture-eyebrow { animation-delay: 0.1s; }
+.architecture-hero-bottom { animation-delay: 0.62s; }
+
+.architecture-hero-detail {
+  animation: architectureDetailIn 1.2s 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.architecture-intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 95px, rgba(37, 75, 50, 0.07) 96px),
+    repeating-linear-gradient(90deg, transparent 0 95px, rgba(37, 75, 50, 0.07) 96px),
+    radial-gradient(circle at 82% 28%, rgba(175, 191, 159, 0.25), transparent 33%);
+}
+
+.architecture-intro::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 54px;
+  right: -9vw;
+  width: 32vw;
+  height: 32vw;
+  border: 1px solid rgba(37, 75, 50, 0.13);
+  box-shadow: 0 0 0 36px rgba(37, 75, 50, 0.025), 0 0 0 72px rgba(37, 75, 50, 0.025);
+  transform: rotate(45deg);
+}
+
+.architecture-intro blockquote {
+  position: relative;
+  border-left: 0;
+  padding: 28px 30px 30px;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 22px 22px 0 rgba(37, 75, 50, 0.08);
+}
+
+.architecture-intro blockquote::before,
+.architecture-intro blockquote::after {
+  content: '';
+  position: absolute;
+  background: var(--arch-green);
+}
+
+.architecture-intro blockquote::before {
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+}
+
+.architecture-intro blockquote::after {
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 60px;
+}
+
+.architecture-metrics > div {
+  position: relative;
+  transition: background 0.55s, color 0.55s;
+}
+
+.architecture-metrics > div:hover {
+  background: #dce7d5;
+}
+
+.architecture-metrics strong {
+  color: var(--arch-green);
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.architecture-metrics > div:hover strong {
+  transform: translateY(-7px);
+}
+
+.architecture-services {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: var(--arch-ink);
+  background-image:
+    linear-gradient(rgba(193, 214, 183, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(193, 214, 183, 0.055) 1px, transparent 1px),
+    radial-gradient(circle at 85% 8%, rgba(93, 157, 104, 0.15), transparent 36%);
+  background-size: 44px 44px, 44px 44px, auto;
+}
+
+.architecture-services::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -220px;
+  right: -40px;
+  width: 580px;
+  height: 580px;
+  border: 1px solid rgba(145, 201, 139, 0.16);
+  border-radius: 50%;
+  background: conic-gradient(from 20deg, transparent 0 275deg, rgba(145, 201, 139, 0.09) 300deg, transparent 330deg);
+  box-shadow: 0 0 0 54px rgba(145, 201, 139, 0.025), 0 0 0 108px rgba(145, 201, 139, 0.025);
+  animation: architectureOrbit 30s linear infinite;
+}
+
+.architecture-services .architecture-heading-row h2 span:last-child {
+  color: #89cf7d;
+}
+
+.architecture-service-grid article {
+  background: rgba(34, 43, 35, 0.9);
+  transition: background 0.65s, color 0.65s, box-shadow 0.65s;
+}
+
+.architecture-service-grid article::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(142, 214, 130, 0.82);
+  opacity: 0;
+  clip-path: polygon(0 0, 0 0, 0 0);
+  transition: opacity 0.5s, clip-path 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.architecture-service-grid article::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 46%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(161, 223, 149, 0.11));
+  transform: skewX(-18deg) translateX(135%);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.architecture-service-grid article:hover {
+  background: #315c3e;
+  color: #f0eee7;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.22);
+}
+
+.architecture-service-grid article:hover::before {
+  opacity: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.architecture-service-grid article:hover::after {
+  transform: skewX(-18deg) translateX(-250%);
+}
+
+.architecture-service-grid article:hover p {
+  color: #d6e4d3;
+}
+
+.architecture-service-grid article:hover .architecture-service-mark {
+  background: #a8dba0;
+  transform: rotate(135deg) scale(1.08);
+}
+
+.architecture-service-grid article:hover > svg {
+  transform: translate(5px, -5px);
+}
+
+.architecture-service-grid article > svg {
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.architecture-craft {
+  position: relative;
+  overflow: hidden;
+  background-image:
+    linear-gradient(135deg, rgba(48, 83, 53, 0.07) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(48, 83, 53, 0.07) 25%, transparent 25%);
+  background-size: 70px 70px;
+}
+
+.architecture-craft-images::after {
+  content: '';
+  position: absolute;
+  inset: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  pointer-events: none;
+}
+
+.architecture-craft-main {
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.architecture-craft:hover .architecture-craft-main {
+  transform: scale(1.045);
+}
+
+.architecture-craft-small {
+  box-shadow: 0 30px 55px rgba(23, 37, 24, 0.23);
+}
+
+.architecture-craft-copy {
+  background-image:
+    linear-gradient(rgba(37, 75, 50, 0.065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 75, 50, 0.065) 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+
+.architecture-projects {
+  position: relative;
+  overflow: hidden;
+  background-image: radial-gradient(circle at 100% 0%, rgba(121, 165, 113, 0.16), transparent 34%);
+}
+
+.architecture-project {
+  position: relative;
+  box-shadow: 18px 18px 0 rgba(37, 75, 50, 0.08);
+  transition: box-shadow 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.architecture-project:hover {
+  box-shadow: 28px 28px 0 rgba(37, 75, 50, 0.13);
+}
+
+.architecture-project-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(18, 49, 28, 0.22), transparent 54%);
+  pointer-events: none;
+}
+
+.architecture-project-image img {
+  transform: scale(1.08);
+}
+
+.architecture-project:hover .architecture-project-image img {
+  transform: scale(1);
+}
+
+.architecture-legacy {
+  position: relative;
+  isolation: isolate;
+  background-image:
+    radial-gradient(circle at 6% 95%, rgba(163, 218, 153, 0.18), transparent 40%),
+    repeating-linear-gradient(90deg, transparent 0 73px, rgba(222, 246, 211, 0.06) 74px);
+}
+
+.architecture-legacy::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 10%;
+  left: -17%;
+  width: 48%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(235, 245, 229, 0.17);
+  border-radius: 50%;
+  box-shadow: 0 0 0 64px rgba(235, 245, 229, 0.035), 0 0 0 128px rgba(235, 245, 229, 0.025);
+}
+
+.architecture-contact-copy {
+  background-image:
+    repeating-linear-gradient(135deg, transparent 0 29px, rgba(24, 26, 23, 0.08) 30px),
+    radial-gradient(circle at 20% 80%, rgba(248, 246, 226, 0.4), transparent 48%);
+}
+
+.architecture-service-grid.is-visible article,
+.architecture-metrics.is-visible > div,
+.architecture-legacy-grid.is-visible figure {
+  animation: architectureCardIn 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.architecture-service-grid.is-visible article:nth-child(2),
+.architecture-metrics.is-visible > div:nth-child(2),
+.architecture-legacy-grid.is-visible figure:nth-child(2) { animation-delay: 0.12s; }
+
+.architecture-service-grid.is-visible article:nth-child(3),
+.architecture-metrics.is-visible > div:nth-child(3) { animation-delay: 0.24s; }
+
+.architecture-service-grid.is-visible article:nth-child(4),
+.architecture-metrics.is-visible > div:nth-child(4) { animation-delay: 0.36s; }
+
+@keyframes gatewayBrandIn {
+  from { opacity: 0; transform: translate(-50%, -30px) scale(0.93); }
+  to { opacity: 1; transform: translate(-50%, 0) scale(1); }
+}
+
+@keyframes architecturePanelIn {
+  from { clip-path: inset(0 0 100% 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes architectureTitleIn {
+  from { opacity: 0; clip-path: inset(100% 0 0 0); transform: translateY(46px); }
+  to { opacity: 1; clip-path: inset(0); transform: translateY(0); }
+}
+
+@keyframes architectureTextIn {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes architectureDetailIn {
+  from { opacity: 0; transform: translateY(80px) rotate(-9deg); }
+  to { opacity: 1; transform: translateY(0) rotate(0); }
+}
+
+@keyframes architectureCardIn {
+  from { opacity: 0; transform: translateY(66px) rotateX(8deg); }
+  to { opacity: 1; transform: translateY(0) rotateX(0); }
+}
+
+@keyframes architectureOrbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 [data-arch-reveal] {
   opacity: 0;
   transform: translateY(55px);
@@ -783,9 +1204,9 @@
   .experience-gateway { min-height: 680px; }
   .gateway-topline { top: 17px; right: 18px; left: 18px; }
   .gateway-topline > span { max-width: 160px; font-size: 7px; line-height: 1.5; }
-  .gateway-brand { top: 37px; }
-  .gateway-brand img { width: 170px; height: 68px; }
-  .gateway-brand span { margin-top: -10px; font-size: 6px; }
+  .gateway-brand { top: 45px; width: 260px; min-height: 104px; padding: 8px 16px 15px; }
+  .gateway-brand img { width: 190px; height: 66px; }
+  .gateway-brand span { margin-top: -3px; font-size: 7px; letter-spacing: 0.19em; }
   .gateway-panels { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
   .gateway-panel + .gateway-panel { border-top: 1px solid rgba(255, 255, 255, 0.24); border-left: 0; }
   .gateway-architecture > img { object-position: center 48%; }
@@ -804,6 +1225,8 @@
   .architecture-actions { gap: 7px; }
   .architecture-hero { display: block; height: 100svh; min-height: 680px; max-height: none; padding-top: 70px; }
   .architecture-hero-copy { position: absolute; z-index: 5; inset: 70px 0 0; justify-content: flex-end; padding: 120px 23px 65px; color: white; }
+  .architecture-hero-copy::before,
+  .architecture-hero-copy::after { display: none; }
   .architecture-eyebrow { color: #d8d3c5; }
   .architecture-hero h1 { margin-top: 22px; font-size: 47px; text-shadow: 0 12px 35px rgba(0, 0, 0, 0.35); }
   .architecture-hero h1 span:last-child { color: #b6dfae; }
@@ -870,6 +1293,17 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .gateway-brand,
+  .architecture-hero-visual,
+  .architecture-hero h1 span,
+  .architecture-eyebrow,
+  .architecture-hero-bottom,
+  .architecture-hero-detail,
+  .architecture-services::before,
+  .architecture-service-grid.is-visible article,
+  .architecture-metrics.is-visible > div,
+  .architecture-legacy-grid.is-visible figure { animation: none; }
+
   .gateway-panel > img,
   .architecture-hero-visual > img { animation: none; transition: none; }
   [data-arch-reveal] { opacity: 1; transform: none; clip-path: none; }
