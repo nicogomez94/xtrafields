@@ -97,7 +97,7 @@
 }
 
 .gateway-brand span {
-  margin-top: -5px;
+  margin-top: 18px;
   color: #f2f5e9;
   font-size: 10px;
   font-weight: 700;
@@ -1236,7 +1236,7 @@
   .gateway-topline > span { max-width: 160px; font-size: 7px; line-height: 1.5; }
   .gateway-brand { top: 45px; width: 260px; min-height: 104px; padding: 8px 16px 15px; }
   .gateway-brand img { width: 190px; height: 66px; }
-  .gateway-brand span { margin-top: -3px; font-size: 7px; letter-spacing: 0.19em; }
+  .gateway-brand span { margin-top: 13px; font-size: 7px; letter-spacing: 0.19em; }
   .gateway-panels { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
   .gateway-panel + .gateway-panel { border-top: 1px solid rgba(255, 255, 255, 0.24); border-left: 0; }
   .gateway-architecture > img { object-position: center 48%; }
