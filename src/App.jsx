@@ -5,6 +5,7 @@ import { faCompassDrafting, faFutbol, faHelmetSafety } from '@fortawesome/free-s
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import ContactForm, { whatsappNumber } from './ContactForm';
 import { ArchitectureSite, ExperienceGateway } from './ArchitectureExperience';
+import { sentenceCaseLines } from './sentenceCaseLines';
 
 const content = {
   en: {
@@ -294,10 +295,10 @@ function ArrowIcon({ diagonal = false }) {
   );
 }
 
-function LineTitle({ lines, className = '' }) {
+function LineTitle({ lines, language, className = '' }) {
   return (
     <span className={className}>
-      {lines.map((line) => <span className="title-line" key={line}>{line}</span>)}
+      {sentenceCaseLines(lines, language).map((line, index) => <span className="title-line" key={index}>{line}</span>)}
     </span>
   );
 }
@@ -436,7 +437,7 @@ function SportsSite({ language, setLanguage, onHome }) {
           <div className="hero-grid" aria-hidden="true" />
           <div className="hero-content">
             <div className="hero-meta"><span className="meta-dot" />{t.heroEyebrow}</div>
-            <h1 id="hero-title"><LineTitle lines={t.heroTitle} /></h1>
+            <h1 id="hero-title"><LineTitle lines={t.heroTitle} language={language} /></h1>
             <div className="hero-bottom-row">
               <p>{t.heroCopy}</p>
               <button type="button" className="round-arrow" onClick={() => jumpTo('#expertise')} aria-label={t.explore}>
@@ -463,7 +464,7 @@ function SportsSite({ language, setLanguage, onHome }) {
           <div className="section-kicker" data-reveal="wipe"><span className="kicker-bar" />{t.introEyebrow}</div>
           <div className="intro-layout">
             <div className="intro-copy" data-reveal="from-left">
-              <h2><LineTitle lines={t.introTitle} /></h2>
+              <h2><LineTitle lines={t.introTitle} language={language} /></h2>
               <p className="intro-lead">{t.introLead}</p>
               <p className="body-copy">{t.introBody}</p>
               <div className="intro-signature"><span className="signature-line" />{t.introTag}</div>
@@ -481,7 +482,7 @@ function SportsSite({ language, setLanguage, onHome }) {
         <section className="expertise section-pad" id="expertise">
           <div className="section-kicker" data-reveal="wipe"><span className="kicker-bar" />{t.expertiseEyebrow}</div>
           <div className="expertise-heading" data-reveal="from-left">
-            <h2><LineTitle lines={t.expertiseTitle} /></h2>
+            <h2><LineTitle lines={t.expertiseTitle} language={language} /></h2>
             <p>{t.expertiseCopy}</p>
           </div>
           <div className="service-grid" data-reveal="cards">
@@ -506,7 +507,7 @@ function SportsSite({ language, setLanguage, onHome }) {
         <section className="projects section-pad" id="projects">
           <div className="section-kicker" data-reveal="wipe"><span className="kicker-bar" />{t.projectsEyebrow}</div>
           <div className="projects-heading" data-reveal="from-left">
-            <h2><LineTitle lines={t.projectsTitle} /></h2>
+            <h2><LineTitle lines={t.projectsTitle} language={language} /></h2>
             <p>{t.projectsCopy}</p>
           </div>
           <div className="project-grid" data-reveal="cards">
@@ -540,7 +541,7 @@ function SportsSite({ language, setLanguage, onHome }) {
           <div className="statement-cross" aria-hidden="true">+</div>
           <div className="statement-content" data-reveal="from-left">
             <div className="section-kicker"><span className="kicker-bar" />{t.statementEyebrow}</div>
-            <h2 id="statement-title"><LineTitle lines={t.statement} /></h2>
+            <h2 id="statement-title"><LineTitle lines={t.statement} language={language} /></h2>
           </div>
           <div className="statement-corner" aria-hidden="true"><img src="/images/x-trafields-logo.png" alt="" /></div>
         </section>
@@ -548,7 +549,7 @@ function SportsSite({ language, setLanguage, onHome }) {
         <section className="approach section-pad" id="approach">
           <div className="section-kicker" data-reveal="wipe"><span className="kicker-bar" />{t.processEyebrow}</div>
           <div className="approach-top" data-reveal="from-right">
-            <h2><LineTitle lines={t.processTitle} /></h2>
+            <h2><LineTitle lines={t.processTitle} language={language} /></h2>
             <p>{t.processCopy}</p>
           </div>
           <div className="process-grid" data-reveal="cards">
@@ -565,7 +566,7 @@ function SportsSite({ language, setLanguage, onHome }) {
         <section className="contact" id="contact">
           <div className="contact-panel" data-reveal="from-left">
             <div className="section-kicker"><span className="kicker-bar" />{t.contactEyebrow}</div>
-            <h2><LineTitle lines={t.contactTitle} /></h2>
+            <h2><LineTitle lines={t.contactTitle} language={language} /></h2>
             <p>{t.contactCopy}</p>
           </div>
           <div className="contact-form-stage" data-reveal="from-right">

@@ -4,8 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faCompassDrafting, faHelmetSafety, faPaintRoller, faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
 import ContactForm, { whatsappNumber } from './ContactForm';
+import { sentenceCaseLines } from './sentenceCaseLines';
 
 const serviceIcons = [faCompassDrafting, faHelmetSafety, faPaintRoller, faScrewdriverWrench];
+
+function HeadingLines({ lines, language }) {
+  return sentenceCaseLines(lines, language).map((line, index) => <span key={index}>{line}</span>);
+}
 
 function ArchitectureLogo() {
   return (
@@ -385,7 +390,7 @@ export function ArchitectureSite({ language, setLanguage, onHome, onSports }) {
         <section className="architecture-hero" id="architecture-top">
           <div className="architecture-hero-copy">
             <span className="architecture-eyebrow">{t.heroEyebrow}</span>
-            <h1>{t.heroTitle.map((line) => <span key={line}>{line}</span>)}</h1>
+            <h1><HeadingLines lines={t.heroTitle} language={language} /></h1>
             <div className="architecture-hero-bottom">
               <p>{t.heroCopy}</p>
               <button type="button" onClick={() => jumpTo('#architecture-about')}>{t.heroCta}<Arrow /></button>
@@ -405,7 +410,7 @@ export function ArchitectureSite({ language, setLanguage, onHome, onSports }) {
           <div className="architecture-section-label" data-arch-reveal="line">{t.introEyebrow}</div>
           <div className="architecture-intro-grid">
             <div data-arch-reveal="left">
-              <h2>{t.introTitle.map((line) => <span key={line}>{line}</span>)}</h2>
+              <h2><HeadingLines lines={t.introTitle} language={language} /></h2>
               <p className="architecture-intro-lead">{t.introLead}</p>
               <p className="architecture-copy">{t.introBody}</p>
             </div>
@@ -419,7 +424,7 @@ export function ArchitectureSite({ language, setLanguage, onHome, onSports }) {
         <section className="architecture-services architecture-section" id="architecture-services">
           <div className="architecture-section-label" data-arch-reveal="line">{t.servicesEyebrow}</div>
           <div className="architecture-heading-row" data-arch-reveal="left">
-            <h2>{t.servicesTitle.map((line) => <span key={line}>{line}</span>)}</h2>
+            <h2><HeadingLines lines={t.servicesTitle} language={language} /></h2>
             <p>{t.servicesCopy}</p>
           </div>
           <div className="architecture-service-grid" data-arch-reveal="cards">
@@ -443,7 +448,7 @@ export function ArchitectureSite({ language, setLanguage, onHome, onSports }) {
           </div>
           <div className="architecture-craft-copy" data-arch-reveal="right">
             <div className="architecture-section-label">{t.craftEyebrow}</div>
-            <h2>{t.craftTitle.map((line) => <span key={line}>{line}</span>)}</h2>
+            <h2><HeadingLines lines={t.craftTitle} language={language} /></h2>
             <p>{t.craftCopy}</p>
           </div>
         </section>
@@ -451,7 +456,7 @@ export function ArchitectureSite({ language, setLanguage, onHome, onSports }) {
         <section className="architecture-projects architecture-section" id="architecture-projects">
           <div className="architecture-section-label" data-arch-reveal="line">{t.projectsEyebrow}</div>
           <div className="architecture-heading-row" data-arch-reveal="left">
-            <h2>{t.projectsTitle.map((line) => <span key={line}>{line}</span>)}</h2>
+            <h2><HeadingLines lines={t.projectsTitle} language={language} /></h2>
           </div>
           <div className="architecture-project-list">
             {t.projects.map((project, index) => (
@@ -473,7 +478,7 @@ export function ArchitectureSite({ language, setLanguage, onHome, onSports }) {
         <section className="architecture-legacy">
           <div className="architecture-legacy-copy" data-arch-reveal="left">
             <div className="architecture-section-label">{t.legacyEyebrow}</div>
-            <h2>{t.legacyTitle.map((line) => <span key={line}>{line}</span>)}</h2>
+            <h2><HeadingLines lines={t.legacyTitle} language={language} /></h2>
             <p>{t.legacyCopy}</p>
           </div>
           <div className="architecture-legacy-grid" data-arch-reveal="cards">
@@ -489,7 +494,7 @@ export function ArchitectureSite({ language, setLanguage, onHome, onSports }) {
         <section className="architecture-contact" id="architecture-contact">
           <div className="architecture-contact-copy" data-arch-reveal="left">
             <div className="architecture-section-label">{t.contactEyebrow}</div>
-            <h2>{t.contactTitle.map((line) => <span key={line}>{line}</span>)}</h2>
+            <h2><HeadingLines lines={t.contactTitle} language={language} /></h2>
             <p>{t.contactCopy}</p>
           </div>
           <div className="architecture-form-stage" data-arch-reveal="right">
