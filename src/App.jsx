@@ -472,7 +472,7 @@ function SportsSite({ language, setLanguage, onHome }) {
               <div className="collage-outline" />
               <div className="collage-main image-frame"><img src={photos.stands} alt={t.standsAlt} loading="lazy" /></div>
               <div className="collage-small image-frame"><img src={photos.field} alt={t.fieldAlt} loading="lazy" /></div>
-              <div className="collage-square"><span>X-TRA<br />FIELDS</span><ArrowIcon diagonal /></div>
+              <div className="collage-square"><img src="/images/x-trafields-logo.png" alt="X-TRAFIELDS" /><ArrowIcon diagonal /></div>
               <div className="collage-caption">{t.structure} <span>×</span> {t.performance}</div>
             </div>
           </div>

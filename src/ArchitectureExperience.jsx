@@ -20,27 +20,27 @@ const gatewayContent = {
   es: {
     prompt: 'DOS FORMAS DE CONSTRUIR EL FUTURO',
     choose: 'Elegí una experiencia',
-    architecture: 'Arquitectura a medida',
+    architecture: 'Arquitectura corporativa',
     architectureCopy: 'Diseño, obra llave en mano y espacios únicos.',
-    sports: 'Corporativa y deportiva',
+    sports: 'Arquitectura deportiva',
     sportsCopy: 'Infraestructura, estadios y superficies de alto rendimiento.',
     enter: 'Explorar'
   },
   en: {
     prompt: 'TWO WAYS TO BUILD THE FUTURE',
     choose: 'Choose an experience',
-    architecture: 'Bespoke architecture',
+    architecture: 'Corporate architecture',
     architectureCopy: 'Design, turnkey construction and singular spaces.',
-    sports: 'Corporate and sports',
+    sports: 'Sports architecture',
     sportsCopy: 'Infrastructure, stadiums and high-performance surfaces.',
     enter: 'Explore'
   },
   el: {
     prompt: 'ΔΥΟ ΤΡΟΠΟΙ ΝΑ ΧΤΙΣΟΥΜΕ ΤΟ ΜΕΛΛΟΝ',
     choose: 'Επιλέξτε εμπειρία',
-    architecture: 'Αρχιτεκτονική κατά παραγγελία',
+    architecture: 'Εταιρική αρχιτεκτονική',
     architectureCopy: 'Σχεδιασμός, κατασκευή με το κλειδί στο χέρι και μοναδικοί χώροι.',
-    sports: 'Εταιρικά και αθλητικά έργα',
+    sports: 'Αθλητική αρχιτεκτονική',
     sportsCopy: 'Υποδομές, στάδια και επιφάνειες υψηλής απόδοσης.',
     enter: 'Εξερεύνηση'
   }
